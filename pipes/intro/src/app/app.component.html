@@ -1,0 +1,58 @@
+<div class="container">
+  <h1>Invoice</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input class="form-control" type="text" (input)="onNameChange($any($event.target).value)">
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <label for="">Name</label>
+      {{name | titlecase}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Payment Date</label>
+        <input class="form-control" type="date" (input)="onDateChange($any($event.target).value)">
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <label for="">Payment Date</label>
+      {{date | date:'MMMM d,y'}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Total</label>
+        <input class="form-control" type="text" (input)="onMoneyChange($any($event.target).value)">
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <label for="">Total</label>
+      {{money | currency:"TRY"}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Height</label>
+        <input class="form-control" type="text" (input)="onHeightChange($any($event.target).value)">
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <label for="">Height</label>
+      {{heigth | number:"1.0-0"}}
+    </div>
+  </div>
+</div>
